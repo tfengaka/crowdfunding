@@ -4,6 +4,7 @@ import logger from "redux-logger";
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
-  middleware: (gDM) => gDM().concat(logger, sagaMiddleware),
+	reducer: {},
+	middleware: (gDM) => gDM().concat(logger, sagaMiddleware),
 });
 // sagaMiddleware.run(rootSaga);
