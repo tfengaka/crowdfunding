@@ -10,7 +10,7 @@ Label.propTypes = {
 function Label({ title, htmlFor, className }) {
   return (
     <label
-      className={`inline-block text-sm font-medium cursor-pointer text-text2 ${className}`}
+      className={`inline-block text-sm mb-1 font-medium cursor-pointer text-text2 ${className} dark:text-text3`}
       htmlFor={htmlFor}
     >
       {title}
