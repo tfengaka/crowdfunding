@@ -1,6 +1,7 @@
 import React from 'react';
 import { useController } from 'react-hook-form';
 import PropTypes from 'prop-types';
+import { classNames } from '~/utils';
 
 Input.propTypes = {
   id: PropTypes.string,
@@ -22,14 +23,15 @@ function Input({ control, name, type = 'text', error, placeholder, children }) {
       <input
         id={name}
         type={type}
-        className={`w-full px-6 py-4 text-sm font-medium transition-all border-2  rounded-xl text-text1 placeholder:dark:text-text2 placeholder:text-text4 pr-14  dark:bg-darkSecondary  dark:text-white ${
-          error ? 'border-error' : 'border-strock dark:border-darkStroke'
-        }`}
-        placeholder={!error ? placeholder : ''}
+        className={classNames(
+          'w-full p-4 text-base font-medium transition-all border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 pr-14  dark:bg-darkSecondary  dark:text-white',
+          error ? 'border-error text-error' : 'border-strock dark:border-darkStroke'
+        )}
+        holder={!error ? placeholder : ''}
         required={false}
         {...field}
       />
-      {error && (
+      {error && !field.value && (
         <span className="absolute text-sm font-medium pointer-events-none text-error top-2/4 -translate-y-2/4 left-6 error-message">
           {error}
         </span>

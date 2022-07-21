@@ -10,7 +10,7 @@ function EyeToggle({ isOpen }) {
     return (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="w-6 h-6 text-secondary"
+        className="w-6 h-6 dark:text-secondary text-primary"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"

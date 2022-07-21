@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { classNames } from '~/utils';
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
@@ -12,9 +13,10 @@ function Checkbox({ name, isSelected, setSelected, children }) {
   return (
     <div className="flex items-start justify-center mb-5 gap-x-5">
       <div
-        className={`inline-flex items-center justify-center w-5 h-5 border-2 rounded cursor-pointer text-white mt-[4px]  ${
+        className={classNames(
+          'inline-flex items-center justify-center w-5 h-5 border-2 rounded cursor-pointer text-white mt-[4px]',
           isSelected ? 'bg-primary border-primary' : 'border-text4 dark:border-darkStroke'
-        }`}
+        )}
         onClick={setSelected}
       >
         <input type="checkbox" className="hidden" name={name} />
