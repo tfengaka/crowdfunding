@@ -70,7 +70,7 @@ function SignIn() {
             </span>
           </div>
         </Field>
-        <Button type="submit" size="full" color="primary" isLoading={false}>
+        <Button type="submit" size="full" isLoading={false}>
           Sign in
         </Button>
       </form>

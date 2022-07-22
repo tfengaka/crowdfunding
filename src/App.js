@@ -4,6 +4,7 @@ import { Loading } from './components/common';
 
 const SignUpPage = lazy(() => import('./pages/SignUp'));
 const SignInPage = lazy(() => import('./pages/SignIn'));
+const DashboardPage = lazy(() => import('./pages/Dashboard'));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       }
     >
       <Switch>
+        <Route index element={<DashboardPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignInPage />} />
       </Switch>
