@@ -1,11 +1,12 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import * as Yup from 'yup';
+import { Images } from '~/assets';
 import { Button, SocialButton } from '~/components/common';
 import { CheckBox, EyeToggle, Field, Input, Label } from '~/components/form';
 import { AuthLayout } from '~/components/layout';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 
 const schemaValidation = Yup.object({
   name: Yup.string().required('This field is required'),
@@ -40,7 +41,7 @@ function SignUp() {
           Sign in
         </Link>
       </p>
-      <SocialButton content="Sign up with google" icon="/static/google.png" />
+      <SocialButton content="Sign up with google" icon={Images.googleLogo} />
       <p className="mb-4 text-xs text-center lg:text-sm text-text3 lg:mb-8 dark:text-text4">
         Or sign up with email
       </p>
@@ -88,7 +89,7 @@ function SignUp() {
             <span className="underline text-secondary">Privacy policy.</span>
           </p>
         </CheckBox>
-        <Button type="submit" size="full" isLoading={false}>
+        <Button type="submit" isLoading={false} className="w-full bg-primary">
           Create my account
         </Button>
       </form>

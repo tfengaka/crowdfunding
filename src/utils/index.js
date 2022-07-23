@@ -4,7 +4,10 @@ export function classNames(...args) {
       if (typeof arg === 'string') {
         return acc.concat(arg.split(' '));
       }
-      return acc.concat(Object.values(arg));
+      if (typeof arg === 'object') {
+        return acc.concat(Object.values(arg));
+      }
+      return acc;
     }, [])
     .join(' ');
 }

@@ -1,14 +1,15 @@
 import React from 'react';
+import { Images } from '~/assets';
 import Button from './DefaultButton';
 
 function TopBar() {
   return (
     <div className="flex items-center justify-between mb-[30px] max-h-[52px]">
       {/* Left Group */}
-      <div className="flex items-center flex-1 gap-x-14">
-        <img srcSet="/static/logo.png 2x" alt="logo" />
+      <div className="flex items-center flex-1 gap-x-10">
+        <img srcSet={`${Images.logo} 2x`} alt="logo" />
         {/* Search */}
-        <div className="bg-whiteSoft rounded-full shadow-sm p-[5px_7px_5px_15px] w-full flex items-center max-w-[460px]">
+        <div className="bg-whiteSoft rounded-full shadow-lite p-[5px_7px_5px_15px] w-full md:flex items-center min-w-[250px] max-w-[460px] hidden">
           <div className="flex-1 p-[10px]">
             <input
               type="text"
@@ -69,9 +70,9 @@ function TopBar() {
           Start a campaign
         </Button>
         <img
-          src="/static/defaultAvatar.jpg"
+          src={Images.defaultAvatar}
           alt="avatar"
-          className="object-cover rounded-full h-[52px] w-[52px]"
+          className="hidden lg:block object-cover rounded-full h-[52px] w-[52px] "
         />
       </div>
     </div>

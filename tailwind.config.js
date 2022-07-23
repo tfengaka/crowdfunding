@@ -12,6 +12,7 @@ module.exports = {
         primary40: '#77D9AA',
         primary60: '#A5E6C6',
         primary80: '#D2F2E3',
+        primaryExtra: '#F1FBF7',
         secondary: '#6F49FD',
         secondary20: '#8C6DFD',
         secondary40: '#A992FE',
@@ -34,6 +35,9 @@ module.exports = {
         darkSoft: '#24242C',
         darkStroke: '#3A3A43',
         darkRed: '##422C32',
+      },
+      boxShadow: {
+        lite: '10px 10px 20px rgba(211, 211, 211, 0.25)',
       },
     },
   },

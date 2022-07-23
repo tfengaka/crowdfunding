@@ -6,6 +6,7 @@ import { AuthLayout } from '../components/layout';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { useForm } from 'react-hook-form';
+import { Images } from '~/assets';
 
 const schemaValidation = Yup.object({
   email: Yup.string().required('This field is required').email(''),
@@ -34,7 +35,7 @@ function SignIn() {
           Sign up
         </Link>
       </p>
-      <SocialButton content="Sign up with google" icon="/static/google.png" />
+      <SocialButton content="Sign up with google" icon={Images.googleLogo} />
       <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
         <Field>
           <Label title="Email" htmlFor="email" required />
@@ -70,7 +71,7 @@ function SignIn() {
             </span>
           </div>
         </Field>
-        <Button type="submit" size="full" isLoading={false}>
+        <Button type="submit" isLoading={false} className="w-full bg-primary">
           Sign in
         </Button>
       </form>

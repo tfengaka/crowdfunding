@@ -7,23 +7,20 @@ import { classNames } from '~/utils';
 
 DefaultButton.propTypes = {
   type: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  size: PropTypes.string,
-  bgColor: PropTypes.string,
+  className: PropTypes.string,
   isLoading: PropTypes.bool,
   onClick: PropTypes.func,
+  children: PropTypes.node,
 };
 
-function DefaultButton({ type, children, size, bgColor, isLoading, onClick, className = '' }) {
+function DefaultButton({ type, children, isLoading, className, onClick }) {
   return (
     <button
       type={type}
       className={classNames(
-        `w-${size ? size : 'auto'}`,
-        `bg-${bgColor ? bgColor : 'primary'}`,
-        'flex items-center gap-x-2 justify-center py-4 px-6 text-base font-semibold transition-all rounded-lg min-h-[50px] text-white hover:opacity-80',
+        className,
         isLoading ? 'opacity-50 pointer-events-none' : '',
-        className
+        'flex items-center gap-x-2 justify-center py-4 px-6 text-base font-semibold transition-all rounded-lg min-h-[50px] text-white hover:opacity-80'
       )}
       onClick={onClick}
     >
