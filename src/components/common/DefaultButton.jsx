@@ -30,5 +30,5 @@ function DefaultButton({ type, children, isLoading, className, onClick }) {
 }
 
 export default withErrorBoundary(DefaultButton, {
-  FallbackComponent: <Error />,
+  FallbackComponent: Error,
 });

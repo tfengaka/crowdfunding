@@ -41,7 +41,7 @@ const navLinks = [
 
 function Sidebar() {
   return (
-    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] rounded-[20px] px-[14px] py-10 flex flex-col justify-between md:gap-y-40">
+    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] rounded-[20px] px-[14px] py-10 flex flex-col justify-between md:gap-y-40 flex-shrink-0">
       <div className="flex flex-col gap-y-[30px]">
         {navLinks.map(({ display, icon, link }) => (
           <NavLink
@@ -49,8 +49,8 @@ function Sidebar() {
             key={display}
             className={({ isActive }) =>
               classNames(
-                isActive ? 'bg-primaryExtra !text-primary' : '',
-                'flex items-center md:justify-center gap-x-5 p-3 md:rounded-[10px] md:w-12 md:h-12 text-iconColor hover:text-primary'
+                isActive ? 'bg-primaryExtra text-primary' : 'text-iconColor',
+                'flex items-center md:justify-center gap-x-5 p-3 md:rounded-[10px] md:w-12 md:h-12 hover:text-primary'
               )
             }
           >

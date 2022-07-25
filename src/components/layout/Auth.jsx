@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withErrorBoundary } from 'react-error-boundary';
-import Error from '../common/Error';
+import { Link } from 'react-router-dom';
 import { Images } from '~/assets';
+import { Error } from '../common';
 
 AuthLayout.propTypes = {
   children: PropTypes.node,

@@ -2,7 +2,10 @@ import React from 'react';
 
 function Error() {
   return (
-    <div className="p-5 text-center text-red-500 bg-red-100 rounded-lg">Have some errors!</div>
+    <div className="w-full p-4 rounded-lg bg-liteBg only:">
+      <img src="/static/error.svg" alt="error" className="object-cover mb-5" />
+      <h3 className="text-lg font-bold text-center text-error">Have Some Error!</h3>
+    </div>
   );
 }
 
