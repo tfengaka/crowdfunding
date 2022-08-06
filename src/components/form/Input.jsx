@@ -27,7 +27,7 @@ function Input({ control, name, type = 'text', error, placeholder, children }) {
           'w-full p-4 text-base font-medium transition-all border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 pr-14  dark:bg-darkSecondary  dark:text-white',
           error ? 'border-error text-error' : 'border-strock dark:border-darkStroke'
         )}
-        holder={!error ? placeholder : ''}
+        placeholder={!error ? placeholder : ''}
         required={false}
         {...field}
       />
