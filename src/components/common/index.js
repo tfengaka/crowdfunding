@@ -5,3 +5,4 @@ export { default as TopBar } from './TopBar';
 export { default as Loading } from './Loading';
 export { default as Error } from './Error';
 export { default as Section } from './Section';
+export { default as Overlay } from './Overlay';

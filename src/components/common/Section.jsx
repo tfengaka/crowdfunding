@@ -10,13 +10,13 @@ Section.propTypes = {
 
 function Section({ title, quantity, children }) {
   return (
-    <div>
+    <section>
       <div className="flex items-center mb-5 gap-x-1">
-        <h2 className="text-lg font-semibold text-text1">{title}</h2>
+        <h2 className="text-lg font-semibold text-text1 dark:text-white">{title}</h2>
         {quantity && <h2 className="text-lg font-semibold text-secondary">({quantity})</h2>}
       </div>
       {children}
-    </div>
+    </section>
   );
 }
 

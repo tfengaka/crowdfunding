@@ -1,7 +1,7 @@
 const images = {
   logo: require('./logo.png'),
   googleLogo: require('./google.png'),
-  defaultAvatar: require('./defaultAvatar.jpg'),
+  defaultAvatar: require('./defaultAvatar.png'),
   test: require('./test.png'),
 };
 

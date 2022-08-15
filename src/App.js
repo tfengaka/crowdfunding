@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
-import { Loading } from './components/common';
+import { Error, Loading } from './components/common';
 import { DashboardLayout } from './components/layout';
 
 const SignUpPage = lazy(() => import('./pages/SignUp'));
@@ -24,7 +24,7 @@ function App() {
           path="*"
           element={
             <DashboardLayout>
-              <span>NOT FOUND</span>
+              <Error icon="/static/illustration_404.svg" message="Sorry, page not found!" />
             </DashboardLayout>
           }
         />

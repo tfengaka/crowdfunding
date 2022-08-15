@@ -34,11 +34,12 @@ module.exports = {
         softDark: '#22222C',
         darkSoft: '#24242C',
         darkStroke: '#3A3A43',
-        darkRed: '##422C32',
+        darkRed: '#422C32',
       },
       boxShadow: {
         lite: '10px 10px 20px rgba(211, 211, 211, 0.25)',
         card: '0px 2px 4px rgba(184, 184, 184, 0.03), 0px 6px 12px rgba(184, 184, 184, 0.02), 0px 12px 20px rgba(184, 184, 184, 0.03)',
+        dark: '10px 10px 20px rgba(2, 2, 2, 0.25)',
       },
     },
   },

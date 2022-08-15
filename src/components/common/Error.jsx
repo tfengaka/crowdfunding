@@ -1,10 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Error() {
+Error.propTypes = {
+  icon: PropTypes.string,
+  message: PropTypes.string,
+};
+
+function Error({ icon = '/static/error.svg', message = 'Have Some Error!' }) {
   return (
-    <div className="w-full p-4 rounded-lg bg-liteBg only:">
-      <img src="/static/error.svg" alt="error" className="object-cover mb-5" />
-      <h3 className="text-lg font-bold text-center text-error">Have Some Error!</h3>
+    <div className="flex flex-col items-center justify-center w-full my-auto">
+      <img src={icon} alt="error" className="object-cover mb-5 max-w-[500px]" />
+      <h3 className="text-4xl font-bold text-center text-error">{message}</h3>
     </div>
   );
 }
