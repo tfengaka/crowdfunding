@@ -11,9 +11,7 @@ import { AuthLayout } from '~/components/layout';
 const schemaValidation = Yup.object({
   name: Yup.string().required('This field is required'),
   email: Yup.string().required('This field is required').email('Email is invalid'),
-  password: Yup.string()
-    .required('This field is required')
-    .min(6, 'Password must be at least 6 characters'),
+  password: Yup.string().required('This field is required').min(6, 'Password must be at least 6 characters'),
 });
 
 function SignUp() {
@@ -42,18 +40,11 @@ function SignUp() {
         </Link>
       </p>
       <SocialButton content="Sign up with google" icon={Images.googleLogo} />
-      <p className="mb-4 text-xs text-center lg:text-sm text-text3 lg:mb-8 dark:text-text4">
-        Or sign up with email
-      </p>
+      <p className="mb-4 text-xs text-center lg:text-sm text-text3 lg:mb-8 dark:text-text4">Or sign up with email</p>
       <form onSubmit={handleSubmit(handleSignUp)} autoComplete="off">
         <Field>
           <Label title="Full Name" htmlFor="name" required />
-          <Input
-            control={control}
-            name="name"
-            placeholder="Jhon Doe"
-            error={errors.name?.message}
-          />
+          <Input control={control} name="name" placeholder="Jhon Doe" error={errors.name?.message} />
         </Field>
         <Field>
           <Label title="Email" htmlFor="email" required />
@@ -84,12 +75,11 @@ function SignUp() {
         </Field>
         <CheckBox name="term" isSelected={accepted} setSelected={() => setAccepted(!accepted)}>
           <p className="flex-1 text-sm select-none text-text2">
-            I agree to the <span className="underline text-secondary">Terms of Use</span> and have
-            read and understand the{' '}
-            <span className="underline text-secondary">Privacy policy.</span>
+            I agree to the <span className="underline text-secondary">Terms of Use</span> and have read and understand
+            the <span className="underline text-secondary">Privacy policy.</span>
           </p>
         </CheckBox>
-        <Button type="submit" isLoading={false} className="w-full bg-primary">
+        <Button type="submit" isLoading={false} className="w-full text-white bg-primary">
           Create my account
         </Button>
       </form>

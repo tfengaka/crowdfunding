@@ -20,7 +20,7 @@ function DefaultButton({ type, children, isLoading, className, onClick }) {
       className={classNames(
         className,
         isLoading ? 'opacity-50 pointer-events-none' : '',
-        'flex items-center gap-x-2 justify-center py-4 px-6 text-base font-semibold transition-all rounded-lg min-h-[50px] text-white hover:opacity-80'
+        'flex items-center gap-x-2 justify-center py-4 px-6 text-base font-semibold transition-all rounded-lg min-h-[50px] hover:opacity-80'
       )}
       onClick={onClick}
     >

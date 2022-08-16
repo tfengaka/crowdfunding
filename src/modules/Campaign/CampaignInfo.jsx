@@ -14,7 +14,7 @@ function CampaignInfo({ title, story, large }) {
       <h3
         className={classNames(
           'text-text1 dark:text-white ',
-          large ? 'text-xl font-bold mb-4' : 'text-base font-semibold mb-1'
+          large ? 'text-xl font-bold mb-2' : 'text-base font-semibold mb-1'
         )}
       >
         {title}

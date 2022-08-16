@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { Overlay, Sidebar, TopBar } from '../common';
 
 function Dashboard({ children }) {
@@ -8,7 +9,7 @@ function Dashboard({ children }) {
       <TopBar />
       <div className="flex items-start gap-x-10">
         <Sidebar />
-        {children}
+        <Outlet />
       </div>
     </div>
   );

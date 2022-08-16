@@ -21,7 +21,7 @@ function Card(props) {
 
       <div className="px-5 py-4">
         <Category name="Education" link="#" />
-        <div className="mb-4">
+        <div className="mt-3 mb-4">
           <CampaignInfo title={props.title} story={props.story} />
         </div>
         <div className="flex items-center justify-between mb-5 gap-x-5">
@@ -30,7 +30,7 @@ function Card(props) {
         </div>
         <div className="flex items-center gap-x-3">
           <img src={props.author?.avatar} alt="" className="object-cover w-[30px] h-[30px] rounded-full" />
-          <span className="text-base text-text3">
+          <span className="text-sm text-text3">
             by <strong className="font-semibold text-text2">{props.author?.name || 'Mahfuzul Nabil'}</strong>
           </span>
         </div>

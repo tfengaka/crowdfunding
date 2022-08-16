@@ -1,7 +1,6 @@
 import { v4 } from 'uuid';
 import { Images } from '~/assets';
 import { Section } from '~/components/common';
-import { DashboardLayout } from '~/components/layout';
 import { HeaderCard } from '~/modules/Campaign';
 import { Card, Grid } from '~/modules/Dashboard';
 
@@ -36,31 +35,29 @@ const exampleHeader = {
 };
 function Dashboard() {
   return (
-    <DashboardLayout>
-      <div className="flex flex-col w-full gap-y-[30px]">
-        <Section title="Your Campaign" quantity={4}>
-          <HeaderCard {...exampleHeader} />
-        </Section>
-        <Section title="Popular Campaign">
-          <Grid>
-            {Array(4)
-              .fill(0)
-              .map((item) => (
-                <Card key={v4()} {...exampleCard} />
-              ))}
-          </Grid>
-        </Section>
-        <Section title="Recent Campaign">
-          <Grid>
-            {Array(4)
-              .fill(0)
-              .map((item) => (
-                <Card key={v4()} {...exampleCard} />
-              ))}
-          </Grid>
-        </Section>
-      </div>
-    </DashboardLayout>
+    <div className="flex flex-col w-full gap-y-[30px]">
+      <Section title="Your Campaign" quantity={4}>
+        <HeaderCard {...exampleHeader} />
+      </Section>
+      <Section title="Popular Campaign">
+        <Grid col={4} gapX="30px">
+          {Array(4)
+            .fill(0)
+            .map((item) => (
+              <Card key={v4()} {...exampleCard} />
+            ))}
+        </Grid>
+      </Section>
+      <Section title="Recent Campaign">
+        <Grid col={4} gapX="30px">
+          {Array(4)
+            .fill(0)
+            .map((item) => (
+              <Card key={v4()} {...exampleCard} />
+            ))}
+        </Grid>
+      </Section>
+    </div>
   );
 }
 

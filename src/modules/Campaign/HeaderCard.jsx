@@ -18,10 +18,10 @@ HeaderCard.propTypes = {
 function HeaderCard(props) {
   return (
     <div className="flex w-full gap-x-10">
-      <div className="flex-shrink-0 max-w-[550px]">
+      <div className="flex-shrink-0 max-w-[583px]">
         <img src={props.image} alt="" className="object-cover w-full rounded-3xl" />
       </div>
-      <div className="flex flex-col gap-y-5 max-w-[600px]">
+      <div className="flex flex-col gap-y-6 max-w-[600px]">
         <Category name={props.category} link="#" large />
         <CampaignInfo
           title="Remake - We Make architecture exhibition"

@@ -13,7 +13,7 @@ function Category({ name, link, large }) {
   return (
     <Link
       to={link}
-      className={classNames('flex items-baseline gap-x-[10px] mb-4 text-text3', large ? 'text-lg' : 'text-sm')}
+      className={classNames('flex items-baseline gap-x-[10px] text-text3', large ? 'text-lg' : 'text-sm')}
     >
       {large ? (
         <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">

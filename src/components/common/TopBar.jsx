@@ -32,7 +32,7 @@ function TopBar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-        <Button type="button" className="bg-secondary20">
+        <Button type="button" className="text-white bg-secondary20">
           Start a campaign
         </Button>
         <img

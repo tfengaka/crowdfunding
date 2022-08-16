@@ -66,12 +66,10 @@ function SignIn() {
         </Field>
         <Field>
           <div className="text-right">
-            <span className="text-sm font-semibold cursor-pointer text-primary hover:underline">
-              Forgot password
-            </span>
+            <span className="text-sm font-semibold cursor-pointer text-primary hover:underline">Forgot password</span>
           </div>
         </Field>
-        <Button type="submit" isLoading={false} className="w-full bg-primary">
+        <Button type="submit" isLoading={false} className="w-full text-white bg-primary">
           Sign in
         </Button>
       </form>

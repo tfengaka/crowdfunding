@@ -33,10 +33,12 @@ function Searching() {
       </div>
       {/* Search Result */}
       {isSearching && (
-        <div className="absolute w-full lg:w-[150%] bg-white shadow-lite top-full min-h-[500px] translate-y-5 z-50 rounded-3xl left-0 pb-[25px]">
-          <div className="flex p-[10px] items-center justify-between bg-whiteSoft rounded-3xl mb-5">
+        <div className="absolute w-full lg:w-[150%] bg-white shadow-lite top-full min-h-[500px] translate-y-5 z-50 rounded-3xl left-0 pb-[25px] dark:bg-darkSecondary dark:shadow-dark">
+          <div className="flex p-[10px] items-center justify-between bg-whiteSoft rounded-3xl mb-5 dark:bg-darkSoft">
             <div className="p-[10px]">
-              <span className="pl-[5px] text-sm font-medium text-text1 underline">See all 10,124 fundraisier</span>
+              <span className="pl-[5px] text-sm font-medium text-text1 underline dark:text-white">
+                See all 10,124 fundraisier
+              </span>
             </div>
             <button
               className="px-6 py-3 bg-error bg-opacity-10 text-error rounded-[10px] flex items-center justify-center"
@@ -63,14 +65,16 @@ function Searching() {
           </div>
           {/* Releted searchs */}
           <div className="px-6">
-            <h3 className="mb-4 text-sm font-semibold text-text1">Releted searchs</h3>
+            <h3 className="mb-4 text-sm font-semibold text-text1 dark:text-text4">Releted searchs</h3>
             <div className="text-sm text-text2 flex flex-col gap-y-[10px]">
-              <span>
-                <strong className="font-medium text-text1">education</strong> fund
+              <span className="text-text2 dark:text-text4">
+                <strong className="font-medium dark:text-white text-text1">education</strong> fund
               </span>
-              <span>schoralship fund</span>
-              <span>
-                <strong className="font-medium text-text1">education</strong> and schools fund
+
+              <span className="text-text2 dark:text-text4">schoralship fund</span>
+
+              <span className="text-text2 dark:text-text4">
+                <strong className="font-medium dark:text-white text-text1">education</strong> and schools fund
               </span>
             </div>
           </div>
@@ -84,7 +88,7 @@ function Searching() {
       <div className="flex items-center rounded-lg cursor-pointer gap-x-5">
         <img src={Images.defaultAvatar} alt="" className="object-cover rounded-lg w-[50px] h-[50px]" />
         <div className="flex-1 text-sm">
-          <h3 className="text-text1 mb-[5px]">
+          <h3 className="text-text1 mb-[5px] dark:text-white">
             Rylee McCollum's Child <strong className="font-semibold">Education</strong> Fund
           </h3>
           <span className="text-text3">By Rakesh Mahmud</span>
