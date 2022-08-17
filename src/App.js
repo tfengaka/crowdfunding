@@ -2,11 +2,12 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import { Error, Loading } from './components/common';
 import { DashboardLayout } from './components/layout';
-import { CampaignPage } from './pages';
 
 const SignUpPage = lazy(() => import('./pages/SignUp'));
 const SignInPage = lazy(() => import('./pages/SignIn'));
 const DashboardPage = lazy(() => import('./pages/Dashboard'));
+const CampaignPage = lazy(() => import('./pages/Campaign'));
+const CampaignCreatorPage = lazy(() => import('./pages/CampaignCreator'));
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
     >
       <Switch>
         <Route element={<DashboardLayout />}>
-          <Route path="/" element={<DashboardPage />} />
-          <Route path="/campaign" element={<CampaignPage />} />
+          <Route index element={<DashboardPage />} />
+          <Route path="/campaign">
+            <Route index element={<CampaignPage />} />
+            <Route path="create" element={<CampaignCreatorPage />} />
+          </Route>
           <Route path="*" element={<Error icon="/static/illustration_404.svg" message="Sorry, page not found!" />} />
         </Route>
         <Route path="/signup" element={<SignUpPage />} />

@@ -79,7 +79,7 @@ function SignUp() {
             the <span className="underline text-secondary">Privacy policy.</span>
           </p>
         </CheckBox>
-        <Button type="submit" isLoading={false} className="w-full text-white bg-primary">
+        <Button buttonType="submit" isLoading={false} color="primary" className="w-full">
           Create my account
         </Button>
       </form>

@@ -40,12 +40,12 @@ function Campaign() {
             <span className="text-sm text-text3">
               Jump right into our editor and create your first Virtue campaign!
             </span>
-            <Link to="#" className="text-sm text-primary">
+            <Link to="#" className="text-sm text-primary hover:underline">
               Need any help? Learn More...
             </Link>
           </div>
         </div>
-        <Button type="button" className="bg-[#EEEAFD] text-secondary" onClick={() => console.log('Create Campaign')}>
+        <Button buttonType="button" color="tertiary" to="/campaign/create">
           Create campaign
         </Button>
       </div>
@@ -58,8 +58,9 @@ function Campaign() {
             ))}
         </Grid>
         <Button
-          type="button"
-          className="bg-[#EEEAFD] text-secondary mt-10 mx-auto px-14 py-4"
+          buttonType="button"
+          color="tertiary"
+          className="py-4 mx-auto mt-10 px-14"
           onClick={() => console.log('See More')}
         >
           See more+
@@ -74,8 +75,9 @@ function Campaign() {
             ))}
         </Grid>
         <Button
-          type="button"
-          className="bg-[#EEEAFD] text-secondary mt-10 mx-auto px-14 py-4"
+          buttonType="button"
+          color="tertiary"
+          className="py-4 mx-auto mt-10 px-14"
           onClick={() => console.log('See More')}
         >
           See more+

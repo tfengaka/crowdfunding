@@ -40,8 +40,12 @@ function Sidebar() {
     setIsDarkMode(!isDarkMode);
   };
 
+  const handleLogout = () => {
+    window.location.href = '/signin';
+  };
+
   return (
-    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] md:rounded-[20px] md:px-[14px] py-10 flex flex-col justify-between md:gap-y-28 flex-shrink-0 dark:bg-darkSecondary dark:shadow-dark sticky top-5 left-0">
+    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] md:rounded-[20px] md:px-[14px] py-10 flex flex-col justify-between md:gap-y-28 flex-shrink-0 dark:bg-darkSecondary dark:shadow-dark sticky top-20 left-0">
       <div className="flex flex-col gap-y-5">
         {navLinks.map(({ display, icon, link }) => (
           <NavLink
@@ -58,7 +62,10 @@ function Sidebar() {
             <span className="md:hidden">{display}</span>
           </NavLink>
         ))}
-        <button className="flex items-center md:justify-center gap-x-5 p-3 md:rounded-[10px] md:w-12 md:h-12 text-iconColor hover:text-primary">
+        <button
+          className="flex items-center md:justify-center gap-x-5 p-3 md:rounded-[10px] md:w-12 md:h-12 text-iconColor hover:text-primary"
+          onClick={() => handleLogout()}
+        >
           <span>
             <LogoutIcon />
           </span>

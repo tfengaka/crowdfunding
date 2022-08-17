@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Images } from '~/assets';
 import Button from './DefaultButton';
 import Searching from './Searching';
@@ -7,7 +8,9 @@ function TopBar() {
   return (
     <div className="flex items-center justify-between mb-[30px] max-h-[52px]">
       <div className="flex items-center flex-1 gap-x-[68px]">
-        <img srcSet={`${Images.logo} 2x`} alt="logo" />
+        <Link to="/" className="inline-block">
+          <img srcSet={`${Images.logo} 2x`} alt="logo" />
+        </Link>
         <Searching />
       </div>
       <div className="flex items-center justify-end flex-auto gap-x-10">
@@ -32,7 +35,7 @@ function TopBar() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-        <Button type="button" className="text-white bg-secondary20">
+        <Button buttonType="button" className="" color="secondary" to="/campaign">
           Start a campaign
         </Button>
         <img

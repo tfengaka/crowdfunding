@@ -69,7 +69,7 @@ function SignIn() {
             <span className="text-sm font-semibold cursor-pointer text-primary hover:underline">Forgot password</span>
           </div>
         </Field>
-        <Button type="submit" isLoading={false} className="w-full text-white bg-primary">
+        <Button buttonType="submit" isLoading={false} color="primary" className="w-full">
           Sign in
         </Button>
       </form>
