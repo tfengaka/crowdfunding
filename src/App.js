@@ -2,12 +2,12 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import { Error, Loading } from './components/common';
 import { DashboardLayout } from './components/layout';
+import CampaignCreatorPage from './pages/CampaignCreator';
 
 const SignUpPage = lazy(() => import('./pages/SignUp'));
 const SignInPage = lazy(() => import('./pages/SignIn'));
 const DashboardPage = lazy(() => import('./pages/Dashboard'));
 const CampaignPage = lazy(() => import('./pages/Campaign'));
-const CampaignCreatorPage = lazy(() => import('./pages/CampaignCreator'));
 
 function App() {
   return (

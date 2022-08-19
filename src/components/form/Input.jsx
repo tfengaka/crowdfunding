@@ -1,10 +1,9 @@
 import React from 'react';
 import { useController } from 'react-hook-form';
-import PropTypes from 'prop-types';
 import { classNames } from '~/utils';
+import PropTypes from 'prop-types';
 
 Input.propTypes = {
-  id: PropTypes.string,
   control: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   error: PropTypes.string,
@@ -24,7 +23,7 @@ function Input({ control, name, type = 'text', error, placeholder, children }) {
         id={name}
         type={type}
         className={classNames(
-          'w-full p-4 text-base font-medium transition-all border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 pr-14  dark:bg-darkSecondary  dark:text-white',
+          'w-full p-4 text-base font-medium transition-all border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 pr-14 dark:bg-darkSecondary  dark:text-white',
           error ? 'border-error text-error' : 'border-strock dark:border-darkStroke'
         )}
         placeholder={!error ? placeholder : ''}

@@ -41,7 +41,22 @@ module.exports = {
         card: '0px 2px 4px rgba(184, 184, 184, 0.03), 0px 6px 12px rgba(184, 184, 184, 0.02), 0px 12px 20px rgba(184, 184, 184, 0.03)',
         dark: '10px 10px 20px rgba(2, 2, 2, 0.25)',
       },
+      animation: {
+        fadeIn: 'fadeIn 0.3s ease',
+      },
+      keyframes: {
+        fadeIn: {
+          from: {
+            opacity: 0,
+            transform: 'translateY(-10px)',
+          },
+          to: {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+      },
     },
+    plugins: [],
   },
-  plugins: [],
 };

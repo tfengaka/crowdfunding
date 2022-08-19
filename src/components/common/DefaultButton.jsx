@@ -16,7 +16,16 @@ DefaultButton.propTypes = {
   children: PropTypes.node,
 };
 
-function DefaultButton({ buttonType, color, isLoading, to, className, onClick, children, ...rest }) {
+function DefaultButton({
+  buttonType,
+  color,
+  isLoading,
+  to,
+  className,
+  onClick,
+  children,
+  ...rest
+}) {
   let classes =
     'flex items-center gap-x-2 justify-center py-4 px-6 text-base font-semibold transition-all rounded-lg min-h-[50px] hover:opacity-80';
   const childrenElement = !!isLoading ? <Loading color="white" size="sm" /> : children;
@@ -29,7 +38,7 @@ function DefaultButton({ buttonType, color, isLoading, to, className, onClick, c
       classes = classes + ' bg-secondary text-white';
       break;
     case 'tertiary':
-      classes = classes + ' bg-secondary bg-opacity-10 text-secondary';
+      classes = classes + ' bg-[#EEEAFD] dark:bg-secondary20 text-secondary dark:text-white';
       break;
     default:
       break;
@@ -39,7 +48,11 @@ function DefaultButton({ buttonType, color, isLoading, to, className, onClick, c
     return (
       <Link
         to={to}
-        className={classNames(classes, className, !!isLoading ? 'opacity-50 pointer-events-none' : '')}
+        className={classNames(
+          classes,
+          className,
+          !!isLoading ? 'opacity-50 pointer-events-none' : ''
+        )}
         {...rest}
       >
         {childrenElement}
@@ -49,7 +62,11 @@ function DefaultButton({ buttonType, color, isLoading, to, className, onClick, c
   return (
     <button
       type={buttonType}
-      className={classNames(classes, className, !!isLoading ? 'opacity-50 pointer-events-none' : '')}
+      className={classNames(
+        classes,
+        className,
+        !!isLoading ? 'opacity-50 pointer-events-none' : ''
+      )}
       onClick={onClick}
     >
       {childrenElement}

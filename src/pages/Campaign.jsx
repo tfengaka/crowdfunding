@@ -22,7 +22,7 @@ const exampleHeader = {
 function Campaign() {
   return (
     <div className="w-full">
-      <div className="flex items-center justify-between px-[31px] py-10 bg-white mb-10 rounded-[20px]">
+      <div className="flex items-center justify-between px-[31px] py-10 bg-white mb-10 rounded-[20px] dark:bg-darkSecondary">
         <div className="flex items-start gap-x-6">
           <div className="p-[15px] mx-auto text-white rounded-full bg-secondary40">
             <svg
@@ -32,11 +32,18 @@ function Campaign() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+              />
             </svg>
           </div>
           <div className="flex flex-col gap-y-2">
-            <h3 className="text-2xl font-semibold text-text1">Create Your Campaign</h3>
+            <h3 className="text-2xl font-semibold text-text1 dark:text-white">
+              Create Your Campaign
+            </h3>
             <span className="text-sm text-text3">
               Jump right into our editor and create your first Virtue campaign!
             </span>
