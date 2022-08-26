@@ -19,7 +19,7 @@ function TextArea({ control, name, placeholder, ...rest }) {
       id={name}
       name={name}
       className={classNames(
-        'w-full py-4 px-6 text-base font-medium transition-all border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 dark:bg-darkSecondary  dark:text-white dark:border-darkStroke resize-none outline-none min-h-36 overflow-y-auto'
+        'w-full py-4 px-6 text-base font-medium border-2 rounded-lg text-text1 placeholder:dark:text-text2 placeholder:text-text4 dark:bg-darkSecondary  dark:text-white dark:border-darkStroke resize-none outline-none min-h-36 overflow-y-auto'
       )}
       placeholder={placeholder}
       {...rest}

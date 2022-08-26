@@ -1,6 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { CampaignIcon, DashboardIcon, LightIcon, LogoutIcon, PaymentIcon, ProfileIcon, WithdrawIcon } from '~/assets';
+import {
+  CampaignIcon,
+  DashboardIcon,
+  LightIcon,
+  LogoutIcon,
+  PaymentIcon,
+  ProfileIcon,
+  WithdrawIcon,
+} from '~/assets';
 import { classNames } from '~/utils';
 
 const navLinks = [
@@ -45,7 +53,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] md:rounded-[20px] md:px-[14px] py-10 flex flex-col justify-between md:gap-y-28 flex-shrink-0 dark:bg-darkSecondary dark:shadow-dark sticky top-20 left-0">
+    <div className="w-full md:w-[80px] bg-white shadow-[10px_10px_20px_rgba(218,_213,_213,_0.15)] md:rounded-[20px] md:px-[14px] py-10 flex flex-col justify-between md:gap-y-28 flex-shrink-0 dark:bg-darkSecondary dark:shadow-dark">
       <div className="flex flex-col gap-y-5">
         {navLinks.map(({ display, icon, link }) => (
           <NavLink

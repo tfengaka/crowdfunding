@@ -21,7 +21,7 @@ const exampleHeader = {
 
 function Campaign() {
   return (
-    <div className="w-full">
+    <React.Fragment>
       <div className="flex items-center justify-between px-[31px] py-10 bg-white mb-10 rounded-[20px] dark:bg-darkSecondary">
         <div className="flex items-start gap-x-6">
           <div className="p-[15px] mx-auto text-white rounded-full bg-secondary40">
@@ -90,7 +90,7 @@ function Campaign() {
           See more+
         </Button>
       </Section>
-    </div>
+    </React.Fragment>
   );
 }
 

@@ -31,6 +31,8 @@
 // Custom TextEditor styles
 .ql-snow .ql-picker {
   @apply dark:text-white;
+  &-label {
+  }
 }
 .ql-stroke {
   @apply dark:stroke-white;
@@ -41,6 +43,20 @@
 .ql-toolbar.ql-snow {
   @apply font-body font-medium bg-strock rounded-t-[5px] dark:bg-darkStroke;
   border: none;
+
+  .ql-picker.ql-expanded .ql-picker-options {
+    @apply dark:bg-darkSecondary border-strock dark:border-darkStroke rounded-lg shadow-dark;
+
+    .ql-picker-item {
+      @apply dark:bg-darkSecondary dark:text-white dark:hover:text-[#06c];
+    }
+  }
+}
+.ql-tooltip.ql-editing {
+  @apply dark:bg-darkSecondary dark:text-white dark:shadow-dark dark:border-darkStroke rounded-lg;
+  input {
+    @apply text-text1;
+  }
 }
 .ql-container.ql-snow {
   @apply font-body font-medium;

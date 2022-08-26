@@ -9,7 +9,7 @@ const List = ({ children }) => {
       {show && (
         <div
           className={classNames(
-            'absolute left-0 w-full bg-white shadow-lite top-full rounded-lg animate-fadeIn dark:bg-darkSecondary dark:text-white dark:shadow-dark'
+            'absolute left-0 w-full bg-white shadow-lite top-full rounded-lg animate-fadeIn dark:bg-darkSecondary dark:text-white dark:shadow-dark z-10'
           )}
         >
           {children}

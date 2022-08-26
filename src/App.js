@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import { Error, Loading } from './components/common';
 import { DashboardLayout } from './components/layout';
-import CampaignCreatorPage from './pages/CampaignCreator';
+import { CampaignCreator, CampaignView } from './modules/Campaign';
 
 const SignUpPage = lazy(() => import('./pages/SignUp'));
 const SignInPage = lazy(() => import('./pages/SignIn'));
@@ -23,9 +23,13 @@ function App() {
           <Route index element={<DashboardPage />} />
           <Route path="/campaign">
             <Route index element={<CampaignPage />} />
-            <Route path="create" element={<CampaignCreatorPage />} />
+            <Route path="create" element={<CampaignCreator />} />
+            <Route path=":slug" element={<CampaignView />} />
           </Route>
-          <Route path="*" element={<Error icon="/static/illustration_404.svg" message="Sorry, page not found!" />} />
+          <Route
+            path="*"
+            element={<Error icon="/static/illustration_404.svg" message="Sorry, page not found!" />}
+          />
         </Route>
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignInPage />} />

@@ -9,7 +9,9 @@ function Dashboard({ children }) {
       <TopBar />
       <div className="flex items-start gap-x-10">
         <Sidebar />
-        <Outlet />
+        <div className="flex-1">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
